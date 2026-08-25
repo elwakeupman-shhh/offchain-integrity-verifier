@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Local receipts / runtime artifacts
+receipt*.json
+*.egress_chain.json
+_selftest_baseline.json
+_demo_baseline.json
+
+# Secrets (never commit)
+.env
+.env.*
+*.key
+*.pem
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
