@@ -1,4 +1,11 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)
 # offchain-integrity-verifier — off-chain integrity proof toolkit
+
+**Prove your reports haven't been touched.** A lightweight tool that builds a
+hash-chained, tamper-evident record of any file or log series - if anyone edits a
+report after the fact, verification fails loudly. No blockchain, no server, no account:
+it runs fully offline and the proof travels with the file.
 
 A small, dependency-light toolkit that proves a measurement / attestation
 chain is **tamper-evident and honestly labeled** — without trusting the
@@ -70,3 +77,5 @@ No personal email is published here on purpose.)
 ## For your first client
 
 This toolkit is built to be dropped into a real engagement and trusted by a paying client. It runs fully offline, leaves a verifiable evidence chain (self-test PASS), and ships with a signed integrity check (D2) so the client can re-verify the artifact they received was not tampered. Pricing/escrow via USDT-TRC20 is supported out of the box.
+
+Companion tool: [usdt-receipt-verifier](https://github.com/elwakeupman-shhh/usdt-receipt-verifier) - same trust story, applied to crypto payments instead of reports.
