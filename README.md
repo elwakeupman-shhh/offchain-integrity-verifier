@@ -79,3 +79,11 @@ No personal email is published here on purpose.)
 This toolkit is built to be dropped into a real engagement and trusted by a paying client. It runs fully offline, leaves a verifiable evidence chain (self-test PASS), and ships with a signed integrity check (D2) so the client can re-verify the artifact they received was not tampered. Pricing/escrow via USDT-TRC20 is supported out of the box.
 
 Companion tool: [usdt-receipt-verifier](https://github.com/elwakeupman-shhh/usdt-receipt-verifier) - same trust story, applied to crypto payments instead of reports.
+
+## Available for hire
+
+I build this kind of tool to order: operational automation, integrity and verification
+tooling, and content pipelines. Single file, zero third-party dependencies, meaningful
+exit codes.
+
+[zerodeptools on Fiverr](https://www.fiverr.com/zerodeptools)
