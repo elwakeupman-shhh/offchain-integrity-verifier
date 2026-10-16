@@ -92,3 +92,21 @@ tools, and content pipelines. Single file, zero third-party dependencies, meanin
 exit codes, and a test you can run yourself.
 
 [zerodeptools on Fiverr](https://www.fiverr.com/zerodeptools)
+
+## Use it in CI (GitHub Action)
+
+The verifier runs offline and exits non-zero when a chain has been edited, so it works as a
+gate rather than a report:
+
+```yaml
+- uses: elwakeupman-shhh/offchain-integrity-verifier@v1
+  with:
+    chain: evidence/chain.json
+```
+
+Exit codes are the whole point: `0` when the chain is intact and every event is honestly
+labelled, `1` when a hash link breaks, a signature does not match, or an event claims a
+`live-measurement` without the proof fields to back it.
+
+What it does **not** do: it does not tell you whether a measurement was *correct*, only
+whether the chain is intact and honestly labelled. It makes no network calls.
