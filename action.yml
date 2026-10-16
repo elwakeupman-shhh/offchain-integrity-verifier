@@ -1,0 +1,31 @@
+name: 'Offchain Integrity Verifier'
+description: 'Independently verify a hash-chained attestation file, and fail if it was edited after the fact.'
+branding:
+  icon: 'link'
+  color: 'blue'
+
+inputs:
+  chain:
+    description: 'Path to the chain JSON to verify, e.g. evidence/chain.json'
+    required: true
+  python-version:
+    description: 'Python version to run the verifier on'
+    required: false
+    default: '3.11'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Install the one dependency
+      shell: bash
+      run: python -m pip install --quiet cryptography
+
+    - name: Verify the chain
+      shell: bash
+      run: |
+        python "${{ github.action_path }}/verify_cli.py" --chain "${{ inputs.chain }}"
